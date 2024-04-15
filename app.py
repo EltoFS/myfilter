@@ -17,7 +17,7 @@ def request_message(prompt):
 
 @app.route("/")
 def hello_world():
-    message = "Are you dumb? the deadline was next week not now"
+    message = ""
     prompt = Prompt.good_guy(message=message)
     print (prompt)
     completion = request_message(prompt)
