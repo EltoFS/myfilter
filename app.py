@@ -15,8 +15,6 @@ def request_message(prompt):
     )
     return completion
 
-#breakpoint()
-
 @app.route("/")
 def hello_world():
     message = "Are you dumb? the deadline was next week not now"
