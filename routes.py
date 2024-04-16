@@ -18,10 +18,10 @@ def gentleman():
         return message
     raise Exception("add message to request")
 
-@bp.route("/haiku", methods = ['GET'])
-def haiku():
+@bp.route("/sage", methods = ['GET'])
+def sage():
     content = request.get_json()
     if "message" in content:
-        message = myfilter.haiku(content["message"])
+        message = myfilter.sage(content["message"])
         return message
     raise Exception("add message to request")

@@ -25,7 +25,7 @@ class Myfilter:
         }
         return json.dumps(message)
     
-    def haiku(self, message):
+    def sage(self, message):
         self.prompt = f"I want you to rewrite the following message in \
             a haiku poem format: '{message}'"
         message = self.client.request_message(self.prompt)
