@@ -5,12 +5,12 @@ bp = Blueprint("home", __name__)
 
 myfilter = Myfilter()
 
-@bp.route("/")
+@bp.route("/", methods = ['GET'])
 def home():
     message = myfilter.home()
     return message
 
-@bp.route("/gentleman")
+@bp.route("/gentleman", methods = ['GET'])
 def gentleman():
     content = request.get_json()
     if "message" in content:
@@ -18,7 +18,7 @@ def gentleman():
         return message
     raise Exception("add message to request")
 
-@bp.route("/haiku")
+@bp.route("/haiku", methods = ['GET'])
 def haiku():
     content = request.get_json()
     if "message" in content:
